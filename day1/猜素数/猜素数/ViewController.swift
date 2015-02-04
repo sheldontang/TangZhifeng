@@ -27,16 +27,22 @@ class ViewController: UIViewController {
     @IBAction func PrimeTest(sender: UIButton) {
         var InputInt = InputNum.text.toInt()
         var loop = 2
-        
-        while loop < InputInt{
-            if InputInt!%loop != 0{
+        if InputInt > 2{
+            while loop < InputInt{
+                if InputInt!%loop != 0{
                 loop = loop+1
-            }
-            else {
+                }
+                else {
                 Result.text = "这不是一个素数"
                 break
+                }
+                Result.text = "这是一个素数"
+        
             }
-            Result.text = "这是一个素数"
+        }else if InputInt == 2{
+                Result.text = "这是一个素数"
+        }else{
+                Result.text = "请输入大于等于2的数"
         
         }
     }

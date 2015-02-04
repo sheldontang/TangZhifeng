@@ -70,26 +70,33 @@ if n%2 == 0{
 
 */
 
-var NumColumns = 9
-var NumRows = 9
+var NumColumns = 2
+var NumRows = 2
 var array4 = Array<Array<Int>>()
 var value = 1
+
+
 
 for column in 0...NumColumns {
     var columnArray = Array<Int>()
     for row in 0...NumRows {
         columnArray.append(value++)
+        columnArray.count
     }
     array4.append(columnArray)
 }
 
+
+
 println("array4 \(array4)")
+
+array4[0][0] = 2
 
 array4[0][0]
 
-
-
-
+var m = Array<Int>()
+m.append(1)
+m.append(2)
 
 var array3 = [1,2,3,4,8]
 for index in array3{
